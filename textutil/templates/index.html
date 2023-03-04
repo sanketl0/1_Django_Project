@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TEXT UTILS</title>
+    <style>
+        button{
+        font-size:20px;
+        border:5px solid red;
+        border-radius:5px;
+        box-sizing:border-box;
+        margin-top:20px;
+        background-color:green;
+      }
+      .btn{
+      text-align:center;
+      margin-top:10px;
+      padding:10px;
+      font-size:20px;
+      font-weight:bold;
+      }
+
+
+    </style>
+
+</head>
+<body style="background-color:grey;">
+    <h1 style="text-align:center">Welcome to the text analyzer. Enter your text below</h1>
+    <form action="/analayze" method="post"> {% csrf_token %}
+        <textarea name="text" style="margin:0px; width:921px; height:93px;margin-left:300px;" placeholder="enter your text" ></textarea><br>
+        <div class="btn">
+        <input type="checkbox" name="removepunc" >Remove punctutions<br>
+        <input type="checkbox" name="capitals" >UPPERCASE <br>
+        <input type="checkbox" name="newlineremove" >new line remover<br>
+        <input type="checkbox" name="spaceremover" > Extra space remove<br>
+        <input type="checkbox" name="charcount" > charctor counter <br>
+            </div>
+        <button style="margin-left:45%;" type="submit">Analyze text</button>
+    </form>
+</body>
+</html>
